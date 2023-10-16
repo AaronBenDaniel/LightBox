@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "Sowansow",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 41.33, "left": -28.67, "attrs": {} },
+    {
+      "type": "wokwi-led-ring",
+      "id": "ring1",
+      "top": -84.04,
+      "left": 49.67,
+      "attrs": { "pixels": "8" }
+    },
+    { "type": "wokwi-slide-switch", "id": "sw1", "top": -26.7, "left": 166.34, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -64.7, "left": 206.33, "attrs": {} }
+  ],
+  "connections": [
+    [ "ring1:GND", "uno:GND.1", "black", [ "v0" ] ],
+    [ "ring1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "sw1:2", "uno:GND.3", "green", [ "v0" ] ],
+    [ "pot1:GND", "uno:GND.3", "black", [ "v0" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "pot1:SIG", "uno:A3", "green", [ "v0" ] ],
+    [ "sw1:1", "uno:5", "green", [ "v0" ] ],
+    [ "ring1:DIN", "uno:8", "green", [ "v0" ] ]
+  ]
+}
